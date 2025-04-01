@@ -16,18 +16,12 @@
             line-height: 1.6;
             background-color: #f4f4f4;
             color: #333;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
+            text-align: center;
         }
 
         header {
             background-color: #3a8d44;
             color: white;
-            text-align: center;
             padding: 4vw 0;
         }
 
@@ -40,64 +34,49 @@
             font-size: 1.2rem;
         }
 
+        .image-container {
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
         .features {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
             padding: 40px 0;
             background-color: #ffffff;
+            width: 100%;
         }
 
         .feature {
             background-color: #f8f8f8;
             padding: 20px;
             border-radius: 8px;
-            width: 30%;
             text-align: center;
+            margin: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            max-width: 100%;
         }
 
         .feature h2 {
-            font-size: 1.8rem;
+            font-size: 2rem;
             margin-bottom: 10px;
             color: #3a8d44;
         }
 
         .feature p {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: #555;
-        }
-
-        .cta {
-            background-color: #ff9f00;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #333;
-            color: white;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #ff4d4d;
+            padding: 0 15px;
         }
 
         footer {
@@ -105,76 +84,34 @@
             color: white;
             text-align: center;
             padding: 20px 0;
+            margin-top: 20px;
         }
 
         footer p {
-            font-size: 1rem;
+            font-size: 1.4rem;
+            font-weight: bold;
         }
 
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-
-            .feature {
-                width: 45%;
-            }
-
-            .cta h2 {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
+        @media (min-width: 768px) {
             .features {
-                flex-direction: column;
-                align-items: center;
+                justify-content: space-between;
+                padding: 50px 5%;
             }
-
             .feature {
-                width: 80%;
-            }
-
-            .cta h2 {
-                font-size: 1.8rem;
+                flex: 1 1 45%;
             }
         }
 
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.8rem;
+        @media (min-width: 1024px) {
+            .features {
+                padding: 60px 10%;
             }
-
-            header p {
-                font-size: 1rem;
-            }
-
             .feature {
-                width: 100%;
-                padding: 15px;
-            }
-
-            .cta h2 {
-                font-size: 1.5rem;
-            }
-
-            .cta p {
-                font-size: 1rem;
-            }
-
-            button {
-                width: 100%;
-                padding: 12px;
-                font-size: 1rem;
+                flex: 1 1 30%;
             }
         }
     </style>
-    <!-- Google tag (gtag.js) -->
+    
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Z8ZQXKX32"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -186,42 +123,39 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Renewed Life: Your Path to Healthy Nutrition</h1>
-            <p>Transform your life with healthy habits and discover the power of balanced nutrition.</p>
-        </div>
+        <h1>Renewed Life: Your Path to Healthy Nutrition</h1>
+        <p>Transform your life with healthy habits and discover the power of balanced nutrition.</p>
     </header>
 
-    <section class="features">
-        <div class="container">
-            <div class="feature">
-                <h2>Balanced Diet</h2>
-                <p>Learn how to integrate nutritious foods into your daily routine to improve health and energy.</p>
-            </div>
-            <div class="feature">
-                <h2>Natural Supplements</h2>
-                <p>Discover the best supplements to complement your diet and boost your well-being.</p>
-            </div>
-            <div class="feature">
-                <h2>Personalized Plans</h2>
-                <p>Get nutrition plans tailored to your needs with expert health recommendations.</p>
-            </div>
-        </div>
-    </section>
+    <div class="image-container">
+        <img src="https://mejorconsalud.as.com/wp-content/uploads/2018/05/comer-dieta-saludable.jpg" alt="Healthy Eating">
+    </div>
 
-    <section class="cta">
-        <div class="container">
-            <h2>It’s Time to Renew Your Life!</h2>
-            <p>Join our community and start your transformation towards a healthier life today.</p>
-            <button onclick="window.location.href='https://your-website.com'">Get Started Now</button>
+    <section class="features">
+        <div class="feature">
+            <h2>The Power of a Balanced Diet</h2>
+            <p>A well-balanced diet is the key to a healthier life. Eating the right proportions of proteins, fats, and carbohydrates fuels your body and mind, giving you the energy to thrive.</p>
+        </div>
+        <div class="feature">
+            <h2>Natural and Wholesome Eating</h2>
+            <p>Consuming whole foods like fruits, vegetables, nuts, and lean meats improves digestion, boosts immunity, and enhances overall well-being.</p>
+        </div>
+        <div class="feature">
+            <h2>Healthy Lifestyle Tips</h2>
+            <p>Small changes like drinking more water, eating smaller portions, and avoiding processed foods can lead to lasting health improvements.</p>
+        </div>
+        <div class="feature">
+            <h2>Exercise and Nutrition</h2>
+            <p>Pairing a nutritious diet with regular exercise helps maintain a strong heart, muscles, and overall vitality.</p>
+        </div>
+        <div class="feature">
+            <h2>Mental and Emotional Benefits</h2>
+            <p>A healthy diet not only benefits your body but also enhances your mood, reducing stress and improving mental clarity.</p>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Renewed Life. All rights reserved.</p>
-        </div>
+        <p>Every step towards healthier eating is a step towards a better life. Start today!</p>
     </footer>
 </body>
 </html>
-
